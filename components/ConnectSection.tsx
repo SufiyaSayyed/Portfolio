@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ConnectSection = () => {
-  return (
-    <div>ConnectSection</div>
-  )
-}
+  return <section id="connect">ConnectSection</section>;
+};
 
-export default ConnectSection
+export default ConnectSection;

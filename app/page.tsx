@@ -10,25 +10,11 @@ export default function HomePage() {
     <>
       <Navbar />
       <main className="relative overflow-hidden min-h-screen">
-        <section id="about">
-          <HeroSection />
-        </section>
-
-        <section id="projects">
-          <ProjectSection />
-        </section>
-
-        <section id="experience">
-          <ExperienceSection />
-        </section>
-
-        <section id="skills">
-          <SkillSection />
-        </section>
-
-        <section id="connect">
-          <ConnectSection />
-        </section>
+        <HeroSection />
+        <ProjectSection />
+        <ExperienceSection />
+        <SkillSection />
+        <ConnectSection />
       </main>
     </>
   );

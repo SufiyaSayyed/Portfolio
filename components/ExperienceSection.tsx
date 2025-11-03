@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ExperienceSection = () => {
-  return (
-    <div>ExperienceSection</div>
-  )
-}
+  return <section id="experience">ExperienceSection</section>;
+};
 
-export default ExperienceSection
+export default ExperienceSection;
