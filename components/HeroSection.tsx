@@ -1,10 +1,17 @@
-'use client'
+"use client";
 
-import React from 'react'
-import { motion } from 'framer-motion'
-import { TypewriterEffect } from './ui/typewriter-effect'
+import React from "react";
+import { motion } from "framer-motion";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 const HeroSection = () => {
+  const firstLine = [
+    { text: "Hi ", className: "text-foreground" },
+    { text: "I'm ", className: "text-foreground" },
+    { text: "Sufiya", className: "text-primary" },
+    { text: "Sayyed", className: "text-primary" },
+  ];
+
   return (
     <section
       id="about"
@@ -15,41 +22,33 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl md:text-6xl font-bold text-foreground mb-6"
+        className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground mb-10 leading-tight"
       >
-        Hi, I’m{' '}
-        <span className="text-primary">Sufiya Sayyed</span>
+        <TypewriterEffect words={firstLine} cursorClassName="text-black" />
       </motion.h1>
 
-      {/* Typewriter introduction */}
+      {/* Subheading lines */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.8 }}
-        className="text-lg md:text-2xl text-muted-foreground mb-8"
+        className="text-base md:text-lg lg:text-xl text-muted-foreground mb-10 leading-relaxed tracking-wide max-w-3xl"
       >
-        <TypewriterEffect
-          words={[
-            { text: 'Crafting ', className: 'text-foreground' },
-            { text: 'beautiful ', className: 'text-primary' },
-            { text: 'and performant user experiences.' },
-          ]}
-          cursorClassName="text-primary"
-          typeSpeed={80}
-          deleteSpeed={50}
-          delaySpeed={1000}
-        />
-        <TypewriterEffect
-          words={[
-            { text: 'Turning ', className: 'text-foreground' },
-            { text: 'complex ideas ', className: 'text-primary' },
-            { text: 'into seamless digital solutions.' },
-          ]}
-          cursor={false}
-          typeSpeed={80}
-          deleteSpeed={50}
-          delaySpeed={2500}
-        />
+        <p className="mb-2">
+          A{" "}
+          <span className="font-semibold text-foreground">
+            Full-Stack Developer
+          </span>{" "}
+          building intelligent and scalable digital solutions.
+        </p>
+        <p>
+          I craft{" "}
+          <span className="font-medium text-foreground">
+            web and AI-powered applications
+          </span>{" "}
+          that are efficient, reliable, and user-focused – turning complex
+          problems into simple, impactful experiences.
+        </p>
       </motion.div>
 
       {/* CTA Button */}
@@ -58,15 +57,15 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.6 }}
         onClick={() => {
-          const section = document.getElementById('projects')
-          section?.scrollIntoView({ behavior: 'smooth' })
+          const section = document.getElementById("projects");
+          section?.scrollIntoView({ behavior: "smooth" });
         }}
         className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md"
       >
         View My Work
       </motion.button>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
