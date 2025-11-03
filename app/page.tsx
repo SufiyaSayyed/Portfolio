@@ -1,9 +1,35 @@
 import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import ProjectSection from "@/components/ProjectSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import SkillSection from "@/components/SkillSection";
+import ConnectSection from "@/components/ConnectSection";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="relative overflow-hidden min-h-screen">
+    <>
       <Navbar />
-    </div>
+      <main className="relative overflow-hidden min-h-screen">
+        <section id="about">
+          <HeroSection />
+        </section>
+
+        <section id="projects">
+          <ProjectSection />
+        </section>
+
+        <section id="experience">
+          <ExperienceSection />
+        </section>
+
+        <section id="skills">
+          <SkillSection />
+        </section>
+
+        <section id="connect">
+          <ConnectSection />
+        </section>
+      </main>
+    </>
   );
 }
