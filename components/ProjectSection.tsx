@@ -182,15 +182,16 @@ const ProjectSection: React.FC = () => {
     offset: ["start end", "end start"]
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.95, 1, 1, 0.95]);
+  const opacity = useTransform(scrollYProgress, [0, 0.05, 0.95, 1], [0.6, 1, 1, 0.9]);
+  const scale = useTransform(scrollYProgress, [0, 0.05, 0.95, 1], [0.98, 1, 1, 0.98]);
 
   return (
-    <div className="min-h-screen bg-background py-12 md:py-20 px-4 md:px-8 lg:px-12">
+    <section id="projects" className="min-h-screen bg-background py-12 md:py-20 px-4 md:px-8 lg:px-12">
       <motion.div
         ref={containerRef}
         style={{ opacity, scale }}
         className="max-w-7xl mx-auto"
+        layout
       >
         {/* Header - Centered */}
         <motion.div
@@ -221,7 +222,7 @@ const ProjectSection: React.FC = () => {
           ))}
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

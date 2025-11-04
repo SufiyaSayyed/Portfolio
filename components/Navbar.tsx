@@ -1,19 +1,20 @@
 "use client";
-
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   motion,
   useScroll,
   useTransform,
   AnimatePresence,
 } from "framer-motion";
-import { Download, Menu, X } from "lucide-react"; // icons
+import { Download, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("about");
   const [menuOpen, setMenuOpen] = useState(false);
-  const { scrollY } = useScroll();
+  const [manualScroll, setManualScroll] = useState(false); // NEW FLAG
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  const { scrollY } = useScroll();
   const backgroundColor = useTransform(
     scrollY,
     [0, 100],
@@ -30,22 +31,33 @@ const Navbar = () => {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+    if (!element) return;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-      setActiveSection(sectionId);
-      setMenuOpen(false); // close mobile menu when a link is clicked
-    }
+    const offset = 80;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+    // Disable scroll tracking temporarily
+    setManualScroll(true);
+    setActiveSection(sectionId);
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+    setMenuOpen(false);
+
+    // Re-enable scroll tracking after scroll finishes
+    if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+    scrollTimeoutRef.current = setTimeout(() => {
+      setManualScroll(false);
+    }, 1000); // adjust duration if your scroll is longer
   };
 
   useEffect(() => {
     const handleScroll = () => {
+      if (manualScroll) return; // prevent flicker during manual scroll
+
       const sections = navItems.map((item) => item.id);
       const scrollPosition = window.scrollY + 150;
 
@@ -59,8 +71,11 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+    };
+  }, [manualScroll]);
 
   return (
     <motion.nav
