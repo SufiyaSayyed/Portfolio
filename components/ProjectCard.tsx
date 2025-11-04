@@ -85,7 +85,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
                 src={project.image}
                 alt={project.title}
                 className="
-                  w-full h-48 sm:h-56 md:h-64 lg:h-72
+                  w-full h-48 sm:h-56 md:h-64 lg:h-100
                   object-cover rounded-xl
                 "
                 whileHover={{ scale: 1.05 }}

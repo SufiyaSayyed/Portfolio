@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { projects } from "@/data";
 import ProjectCard from "./ProjectCard";
+import AnimatedLine from "./AnimatedLine";
 
 const ProjectSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,12 +46,7 @@ const ProjectSection: React.FC = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
             Featured Projects
           </h1>
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: "24rem" }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="h-1 bg-linear-to-r from-primary via-accent to-primary mb-6 rounded-full mx-auto"
-          />
+          <AnimatedLine />
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Exploring the intersection of AI, design, and engineering through
             innovative solutions
