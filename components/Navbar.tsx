@@ -65,7 +65,7 @@ const Navbar = () => {
   return (
     <motion.nav
       style={{ backgroundColor }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-border"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Brand */}
@@ -97,7 +97,11 @@ const Navbar = () => {
                 onClick={() => scrollToSection(item.id)}
                 className="relative text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
-                {item.label}
+                <span className={`${
+                      activeSection === item.id
+                        ? "font-semibold text-primary"
+                        : "font-normal"
+                    } `}>{item.label}</span>
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeSection"

@@ -24,7 +24,7 @@ const HeroSection = () => {
         transition={{ duration: 0.8 }}
         className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground mb-10 leading-tight"
       >
-        <TypewriterEffect words={firstLine} cursorClassName="text-black" />
+        <TypewriterEffect words={firstLine} cursorClassName="bg-black" />
       </motion.h1>
 
       {/* Subheading lines */}
