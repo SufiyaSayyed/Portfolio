@@ -160,7 +160,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden absolute top-full left-0 right-0 bg-background/90 backdrop-blur-md border-t border-border shadow-lg"
+            className="md:hidden absolute top-full left-0 right-0 bg-background backdrop-blur-lg shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] border-t"
           >
             <ul className="flex flex-col items-center gap-4 py-6">
               {navItems.map((item, index) => (
