@@ -11,7 +11,7 @@ import { Download, Menu, X } from "lucide-react";
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("about");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [manualScroll, setManualScroll] = useState(false); // NEW FLAG
+  const [manualScroll, setManualScroll] = useState(false);
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const { scrollY } = useScroll();
@@ -51,31 +51,58 @@ const Navbar = () => {
     if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
     scrollTimeoutRef.current = setTimeout(() => {
       setManualScroll(false);
-    }, 1000); // adjust duration if your scroll is longer
+    }, 900);
   };
 
   useEffect(() => {
+    const sections = navItems.map((item) => item.id);
+
     const handleScroll = () => {
-      if (manualScroll) return; // prevent flicker during manual scroll
+      if (manualScroll) return;
 
-      const sections = navItems.map((item) => item.id);
-      const scrollPosition = window.scrollY + 150;
+      // Use viewport center as trigger
+      const triggerPoint = window.scrollY + window.innerHeight * 0.5;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i]);
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
+      let found = sections[0];
+
+      for (let i = 0; i < sections.length; i++) {
+        const id = sections[i];
+        const el = document.getElementById(id);
+        if (!el) continue;
+
+        const rect = el.getBoundingClientRect();
+        const sectionTop = rect.top + window.scrollY;
+        const sectionBottom = sectionTop + rect.height;
+
+        if (triggerPoint >= sectionTop && triggerPoint < sectionBottom) {
+          found = id;
           break;
         }
       }
+
+      // If scrolled to (or very near) bottom, ensure last section selected
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 5) {
+        found = sections[sections.length - 1];
+      }
+
+      if (found !== activeSection) {
+        setActiveSection(found);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Run once to set correct state on mount
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
       if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
     };
-  }, [manualScroll]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [manualScroll]); // keep manualScroll as dependency so manualScroll gating works
 
   return (
     <motion.nav
