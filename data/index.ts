@@ -130,7 +130,7 @@ export const skillsCategory: SkillsCategory[] = [
       {
         "name": "Git & Github",
         "description": "For version control and collaboration",
-        "icon": "/git.svg"
+        "icon": "/github.svg"
       },
       {
         "name": "Docker",

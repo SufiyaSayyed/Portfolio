@@ -59,28 +59,42 @@ const SkillSection = () => {
           className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20"
         >
           {skillsCategory.map((category, index) => (
-            <div key={index}>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              key={index}
+            >
               <h2 className="text-md font-semibold text-muted-foreground">
                 {category.title}
               </h2>
               <div className="border my-2 border-b-foreground/10 mx-[-5]"></div>
               {category.skills.map((skill, idx) => (
-                <div key={idx} className="flex flex-row gap-5 border-b-2 border-foreground/10 py-3 items-center">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                  key={idx}
+                  className="flex flex-row gap-5 border-b-2 border-foreground/10 py-3 items-center"
+                >
                   <motion.img
                     src={skill.icon}
                     alt={skill.name}
                     className="w-10 h-10"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
                   />
                   <div>
-                    <h3 className="text-md font-semibold text-foreground">{skill.name}</h3>
-                    <h4 className="text-sm text-muted-foreground font-medium">{skill.description}</h4>
+                    <h3 className="text-md font-semibold text-foreground">
+                      {skill.name}
+                    </h3>
+                    <h4 className="text-sm text-muted-foreground font-medium">
+                      {skill.description}
+                    </h4>
                   </div>
-                  
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </motion.div>

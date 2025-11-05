@@ -12,8 +12,8 @@ export default function HomePage() {
       <main className="relative overflow-hidden min-h-screen">
         <HeroSection />
         <ProjectSection />
-        <ExperienceSection />
         <SkillSection />
+        <ExperienceSection />
         <ConnectSection />
       </main>
     </>
