@@ -1,4 +1,5 @@
-import { Experience, Project, SkillsCategory } from "@/types";
+import { Experience, Project, SkillsCategory, SocialLinks } from "@/types";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export const projects: Project[] = [
   {
@@ -139,4 +140,22 @@ export const skillsCategory: SkillsCategory[] = [
       }
     ]
   }
+]
+
+export const socialLinks: SocialLinks[] = [
+  {
+    icon: "/linkedin-icon.svg",
+    label: "LinkedIn",
+    href: "https://linkedin.com",
+  },
+  {
+    icon: "/github-icon.svg",
+    label: "GitHub",
+    href: "https://github.com",
+  },
+  {
+    icon: "/mail-icon.svg",
+    label: "Email",
+    href: "mailto:ssayyed01@gmail.com",
+  },
 ]

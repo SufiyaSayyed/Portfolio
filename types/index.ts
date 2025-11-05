@@ -1,3 +1,5 @@
+import { LucideIcon } from "lucide-react";
+
 export interface Project {
   title: string;
   subtitle: string;
@@ -24,4 +26,11 @@ export interface Skill {
   name: string;
   description: string;
   icon: string
+}
+
+export interface SocialLinks {
+  icon:  string;
+  label: string;
+  href: string;
+
 }
