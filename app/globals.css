@@ -1,43 +1,43 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 :root {
   --background: oklch(0.9909 0.0082 91.4807);
-  --foreground: oklch(0.2864 0.0023 325.6366);
-  --card: oklch(1.0000 0 0);
+  --foreground: oklch(0.3463 0.0054 236.6609);
+  --card: oklch(1 0 0);
   --card-foreground: oklch(0 0 0);
-  --popover: oklch(1.0000 0 0);
+  --popover: oklch(1 0 0);
   --popover-foreground: oklch(0 0 0);
   --primary: oklch(0.6916 0.1735 31.8442);
-  --primary-foreground: oklch(1.0000 0 0);
+  --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.9249 0 0);
-  --secondary-foreground: oklch(0.2864 0.0023 325.6366);
+  --secondary-foreground: oklch(0.3463 0.0054 236.6609);
   --muted: oklch(0.9702 0 0);
   --muted-foreground: oklch(0.5103 0 0);
   --accent: oklch(0.6916 0.1735 31.8442);
-  --accent-foreground: oklch(1.0000 0 0);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.6368 0.2078 25.3313);
-  --destructive-foreground: oklch(1.0000 0 0);
+  --destructive-foreground: oklch(1 0 0);
   --border: oklch(0.8699 0 0);
   --input: oklch(0.9067 0 0);
   --ring: oklch(0.5867 0.1095 176.1865);
   --chart-1: oklch(0.5867 0.1095 176.1865);
   --chart-2: oklch(0.6509 0.1214 176.3021);
   --chart-3: oklch(0.7183 0.1356 174.8871);
-  --chart-4: oklch(0.7820 0.1478 174.6857);
+  --chart-4: oklch(0.782 0.1478 174.6857);
   --chart-5: oklch(0.8441 0.1605 174.0802);
   --sidebar: oklch(0.9389 0.0094 99.9893);
   --sidebar-foreground: oklch(0 0 0);
   --sidebar-primary: oklch(0.5867 0.1095 176.1865);
-  --sidebar-primary-foreground: oklch(1.0000 0 0);
+  --sidebar-primary-foreground: oklch(1 0 0);
   --sidebar-accent: oklch(0.9249 0 0);
   --sidebar-accent-foreground: oklch(0 0 0);
   --sidebar-border: oklch(0.8699 0 0);
   --sidebar-ring: oklch(0.5867 0.1095 176.1865);
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Playfair Display', serif;
-  --font-mono: 'Fira Code', monospace;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Fira Code", monospace;
   --radius: 0.5rem;
   --shadow-x: 0rem;
   --shadow-y: 0.25rem;
@@ -47,11 +47,16 @@
   --shadow-color: #000000;
   --shadow-2xs: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.05);
   --shadow-xs: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.05);
-  --shadow-sm: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.10), 0rem 1px 2px -0.9px hsl(0 0% 0% / 0.10);
-  --shadow: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.10), 0rem 1px 2px -0.9px hsl(0 0% 0% / 0.10);
-  --shadow-md: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.10), 0rem 2px 4px -0.9px hsl(0 0% 0% / 0.10);
-  --shadow-lg: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.10), 0rem 4px 6px -0.9px hsl(0 0% 0% / 0.10);
-  --shadow-xl: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.10), 0rem 8px 10px -0.9px hsl(0 0% 0% / 0.10);
+  --shadow-sm: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
+    0rem 1px 2px -0.9px hsl(0 0% 0% / 0.1);
+  --shadow: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
+    0rem 1px 2px -0.9px hsl(0 0% 0% / 0.1);
+  --shadow-md: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
+    0rem 2px 4px -0.9px hsl(0 0% 0% / 0.1);
+  --shadow-lg: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
+    0rem 4px 6px -0.9px hsl(0 0% 0% / 0.1);
+  --shadow-xl: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
+    0rem 8px 10px -0.9px hsl(0 0% 0% / 0.1);
   --shadow-2xl: 0rem 0.25rem 0.5rem 0.1rem hsl(0 0% 0% / 0.25);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
@@ -66,14 +71,14 @@
   --popover-foreground: oklch(0.9389 0.0094 99.9893);
   --primary: oklch(0.5867 0.1095 176.1865);
   --primary-foreground: oklch(0 0 0);
-  --secondary: oklch(0.2850 0 0);
+  --secondary: oklch(0.285 0 0);
   --secondary-foreground: oklch(0.9389 0.0094 99.9893);
-  --muted: oklch(0.3600 0 0);
+  --muted: oklch(0.36 0 0);
   --muted-foreground: oklch(0.7668 0 0);
   --accent: oklch(0.5867 0.1095 176.1865);
-  --accent-foreground: oklch(1.0000 0 0);
+  --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.6368 0.2078 25.3313);
-  --destructive-foreground: oklch(1.0000 0 0);
+  --destructive-foreground: oklch(1 0 0);
   --border: oklch(0.4202 0 0);
   --input: oklch(0.3211 0 0);
   --ring: oklch(0.5867 0.1095 176.1865);
@@ -86,13 +91,13 @@
   --sidebar-foreground: oklch(0.9389 0.0094 99.9893);
   --sidebar-primary: oklch(0.5867 0.1095 176.1865);
   --sidebar-primary-foreground: oklch(0 0 0);
-  --sidebar-accent: oklch(0.2850 0 0);
+  --sidebar-accent: oklch(0.285 0 0);
   --sidebar-accent-foreground: oklch(0.9389 0.0094 99.9893);
   --sidebar-border: oklch(0.4202 0 0);
   --sidebar-ring: oklch(0.5867 0.1095 176.1865);
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Playfair Display', serif;
-  --font-mono: 'Fira Code', monospace;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Fira Code", monospace;
   --radius: 0.5rem;
   --shadow-x: 0rem;
   --shadow-y: 0.5rem;
@@ -102,11 +107,16 @@
   --shadow-color: #000000;
   --shadow-2xs: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 0.25);
   --shadow-xs: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 0.25);
-  --shadow-sm: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 0.50), 0rem 1px 2px -0.75px hsl(0 0% 0% / 0.50);
-  --shadow: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 0.50), 0rem 1px 2px -0.75px hsl(0 0% 0% / 0.50);
-  --shadow-md: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 0.50), 0rem 2px 4px -0.75px hsl(0 0% 0% / 0.50);
-  --shadow-lg: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 0.50), 0rem 4px 6px -0.75px hsl(0 0% 0% / 0.50);
-  --shadow-xl: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 0.50), 0rem 8px 10px -0.75px hsl(0 0% 0% / 0.50);
+  --shadow-sm: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 0.5),
+    0rem 1px 2px -0.75px hsl(0 0% 0% / 0.5);
+  --shadow: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 0.5),
+    0rem 1px 2px -0.75px hsl(0 0% 0% / 0.5);
+  --shadow-md: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 0.5),
+    0rem 2px 4px -0.75px hsl(0 0% 0% / 0.5);
+  --shadow-lg: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 0.5),
+    0rem 4px 6px -0.75px hsl(0 0% 0% / 0.5);
+  --shadow-xl: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 0.5),
+    0rem 8px 10px -0.75px hsl(0 0% 0% / 0.5);
   --shadow-2xl: 0rem 0.5rem 0.75rem 0.25rem hsl(0 0% 0% / 1.25);
 }
 

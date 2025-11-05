@@ -7,3 +7,10 @@ export interface Project {
   accentColor: string;
   link: string;
 }
+
+export interface Experience {
+  role: string;
+  company: string;
+  duration: string;
+  description: string[]
+}

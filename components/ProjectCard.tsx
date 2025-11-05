@@ -204,9 +204,9 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: isHovered ? 1 : 0, x: isHovered ? 0 : -20 }}
-            className="hidden absolute bottom-8 right-6 md:flex items-center gap-2 text-primary text-sm font-medium"
+            className="hidden absolute bottom-10 right-6 md:flex items-center gap-2 text-primary text-sm font-bold"
           >
-            <span>View Details</span>
+            <span>View Demo</span>
             <motion.svg
               className="w-4 h-4"
               viewBox="0 0 24 24"
