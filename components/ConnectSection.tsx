@@ -62,9 +62,7 @@ const ConnectSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <button
-                  className="rounded-2xl px-4 py-1 border-2 border-border hover:border-primary bg-card hover:bg-card shadow-lg hover:shadow-xl transition-all duration-300 group"
-                >
+                <button className="rounded-2xl px-4 py-1 border-2 border-border hover:border-primary bg-card hover:bg-card shadow-lg hover:shadow-xl transition-all duration-300 group">
                   <motion.a
                     href={link.href}
                     target="_blank"
@@ -87,6 +85,17 @@ const ConnectSection = () => {
             );
           })}
         </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="text-center mt-16 relative z-10"
+      >
+        <p className="text-foreground/60">
+        Designed and built by <span className="text-foreground">Sufiya Sayyed</span>
+        </p>
       </motion.div>
     </section>
   );
