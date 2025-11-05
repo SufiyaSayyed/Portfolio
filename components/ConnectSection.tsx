@@ -26,8 +26,8 @@ const ConnectSection = () => {
   return (
     <section
       id="connect"
-      className="min-h-[50vh] bg-primary/10 py-12 md:py-20 px-10 md:px-8 lg:px-12"
-    >
+      className="min-h-[50vh] bg-linear-to-b from-primary/5 to-primary/20 py-12 md:py-20 px-10 md:px-8 lg:px-12"
+      >
       <motion.div
         ref={containerRef}
         style={{ opacity, scale }}

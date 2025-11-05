@@ -21,7 +21,7 @@ const AnimatedLine = () => {
       }}
       className="
         h-1 
-        bg-linear-to-r from-primary via-accent to-primary 
+        bg-primary
         mb-6 rounded-full mx-auto
       "
     />
