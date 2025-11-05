@@ -146,12 +146,12 @@ export const socialLinks: SocialLinks[] = [
   {
     icon: "/linkedin-icon.svg",
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/sufiya-sayyed-737534205/",
   },
   {
     icon: "/github-icon.svg",
     label: "GitHub",
-    href: "https://github.com",
+    href: "https://github.com/SufiyaSayyed",
   },
   {
     icon: "/mail-icon.svg",
