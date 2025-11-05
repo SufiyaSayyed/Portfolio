@@ -9,6 +9,7 @@ export const projects: Project[] = [
     image: "/project-ai-research.png",
     size: "large",
     accentColor: "accent",
+    link: "https://github.com/SufiyaSayyed/AI-Research-Paper-Summarizer-and-Critque.git"
   },
   {
     title: "AI ResuMate",
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     image: "/project-ai-resumate.png",
     size: "medium",
     accentColor: "accent",
+    link: "https://ai-resumate.netlify.app/"
   },
   {
     title: "FableAI",
@@ -27,5 +29,6 @@ export const projects: Project[] = [
     image: "/project-ai-fable-1.png",
     size: "medium",
     accentColor: "accent",
+    link: "https://fableai.netlify.app/"
   },
 ];

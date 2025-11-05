@@ -18,7 +18,7 @@ const Navbar = () => {
   const backgroundColor = useTransform(
     scrollY,
     [0, 100],
-    ["rgba(240, 239, 238, 0)", "rgba(240, 239, 238, 0.95)"]
+    ["rgba(240, 239, 238, 0)", "#FBF6F0"]
   );
 
   const navItems = [
@@ -135,7 +135,7 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           onClick={() => scrollToSection("connect")}
-          className="hidden md:flex gap-2 items-center px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
+          className="hidden md:flex gap-2 items-center px-6 py-2 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity"
         >
           <Download size={16} />
           Resume

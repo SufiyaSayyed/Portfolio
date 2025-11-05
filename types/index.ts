@@ -5,4 +5,5 @@ export interface Project {
   image: string;
   size: "large" | "medium" | "small";
   accentColor: string;
+  link: string;
 }
