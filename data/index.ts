@@ -65,32 +65,77 @@ export const experiences: Experience[] = [
 
 export const skillsCategory: SkillsCategory[] = [
   {
-    title: "Frontend",
-    skills: [
+    "title": "Frontend",
+    "skills": [
       {
-        name: "React",
-        description: "For building fast, interactive UIs",
-        icon: "/react.svg"
+        "name": "React",
+        "description": "For building fast, interactive UIs",
+        "icon": "/react.svg"
       },
       {
-        name: "React",
-        description: "For building fast, interactive UIs",
-        icon: "/react.svg"
+        "name": "Angular",
+        "description": "For scalable, enterprise-grade web apps",
+        "icon": "/angular.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "description": "For rapid, utility-first UI styling",
+        "icon": "/tailwind.svg"
       }
     ]
   },
   {
-    title: "Frontend",
-    skills: [
+    "title": "Backend",
+    "skills": [
       {
-        name: "React",
-        description: "For building fast, interactive UIs",
-        icon: "/react.svg"
+        "name": "FastAPI",
+        "description": "For high-performance Python APIs",
+        "icon": "/fastapi.svg"
       },
       {
-        name: "React",
-        description: "For building fast, interactive UIs",
-        icon: "/react.svg"
+        "name": "Langchain",
+        "description": "For building LLM-powered applications",
+        "icon": "/langchain.svg"
+      },
+      {
+        "name": "MongoDB",
+        "description": "For flexible, document-based databases",
+        "icon": "/mongodb.svg"
+      }
+    ]
+  },
+  {
+    "title": "Languages",
+    "skills": [
+      {
+        "name": "Typescript",
+        "description": "For scalable, type-safe JavaScript code",
+        "icon": "/typescript.svg"
+      },
+      {
+        "name": "Python",
+        "description": "For versatile scripting and data tasks",
+        "icon": "/python.svg"
+      },
+      {
+        "name": "HTML & CSS",
+        "description": "For creating and styling web pages",
+        "icon": "/htmlcss.svg"
+      }
+    ]
+  },
+  {
+    "title": "Tools & DevOps",
+    "skills": [
+      {
+        "name": "Git & Github",
+        "description": "For version control and collaboration",
+        "icon": "/git.svg"
+      },
+      {
+        "name": "Docker",
+        "description": "For containerized app deployment",
+        "icon": "/docker.svg"
       }
     ]
   }

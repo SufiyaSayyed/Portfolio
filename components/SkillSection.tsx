@@ -25,7 +25,7 @@ const SkillSection = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen bg-background py-12 md:py-20 px-4 md:px-8 lg:px-12"
+      className="min-h-screen bg-background py-12 md:py-20 px-10 md:px-8 lg:px-12"
     >
       <motion.div
         ref={containerRef}
@@ -46,7 +46,7 @@ const SkillSection = () => {
           </h1>
           <AnimatedLine />
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tools I use and skills I have learnt over time.
+            Frameworks, languages, and tools I use to build products
           </p>
         </motion.div>
 
@@ -60,23 +60,24 @@ const SkillSection = () => {
         >
           {skillsCategory.map((category, index) => (
             <div key={index}>
-              <h2 className="text-lg font-semibold text-muted-foreground">
+              <h2 className="text-md font-semibold text-muted-foreground">
                 {category.title}
               </h2>
               <div className="border my-2 border-b-foreground/10 mx-[-5]"></div>
               {category.skills.map((skill, idx) => (
-                <div key={idx} className="flex flex-row gap-5">
+                <div key={idx} className="flex flex-row gap-5 border-b-2 border-foreground/10 py-3 items-center">
                   <motion.img
                     src={skill.icon}
                     alt={skill.name}
-                    className="w-14 h-14"
+                    className="w-10 h-10"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                   />
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground">{skill.name}</h3>
-                    <h4>{skill.description}</h4>
+                    <h3 className="text-md font-semibold text-foreground">{skill.name}</h3>
+                    <h4 className="text-sm text-muted-foreground font-medium">{skill.description}</h4>
                   </div>
+                  
                 </div>
               ))}
             </div>
