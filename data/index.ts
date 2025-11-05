@@ -1,4 +1,4 @@
-import { Experience, Project } from "@/types";
+import { Experience, Project, SkillsCategory } from "@/types";
 
 export const projects: Project[] = [
   {
@@ -62,3 +62,36 @@ export const experiences: Experience[] = [
     ],
   },
 ];
+
+export const skillsCategory: SkillsCategory[] = [
+  {
+    title: "Frontend",
+    skills: [
+      {
+        name: "React",
+        description: "For building fast, interactive UIs",
+        icon: "/react.svg"
+      },
+      {
+        name: "React",
+        description: "For building fast, interactive UIs",
+        icon: "/react.svg"
+      }
+    ]
+  },
+  {
+    title: "Frontend",
+    skills: [
+      {
+        name: "React",
+        description: "For building fast, interactive UIs",
+        icon: "/react.svg"
+      },
+      {
+        name: "React",
+        description: "For building fast, interactive UIs",
+        icon: "/react.svg"
+      }
+    ]
+  }
+]

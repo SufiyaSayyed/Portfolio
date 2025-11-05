@@ -14,3 +14,14 @@ export interface Experience {
   duration: string;
   description: string[]
 }
+
+export interface SkillsCategory {
+  title: string;
+  skills: Skill[]
+}
+
+export interface Skill {
+  name: string;
+  description: string;
+  icon: string
+}

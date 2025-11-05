@@ -1,9 +1,90 @@
-import React from 'react'
+"use client";
+
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import AnimatedLine from "./AnimatedLine";
+import { skillsCategory } from "@/data";
 
 const SkillSection = () => {
-  return (
-    <section id="skills">SkillSection</section>
-  )
-}
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
 
-export default SkillSection
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.05, 0.95, 1],
+    [0.6, 1, 1, 0.9]
+  );
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.05, 0.95, 1],
+    [0.98, 1, 1, 0.98]
+  );
+  return (
+    <section
+      id="skills"
+      className="min-h-screen bg-background py-12 md:py-20 px-4 md:px-8 lg:px-12"
+    >
+      <motion.div
+        ref={containerRef}
+        style={{ opacity, scale }}
+        className="max-w-4xl mx-auto"
+        layout
+      >
+        {/* Header - Centered */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-12 md:mb-16 text-center"
+        >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+            Skills
+          </h1>
+          <AnimatedLine />
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Tools I use and skills I have learnt over time.
+          </p>
+        </motion.div>
+
+        {/*skills grid */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20"
+        >
+          {skillsCategory.map((category, index) => (
+            <div key={index}>
+              <h2 className="text-lg font-semibold text-muted-foreground">
+                {category.title}
+              </h2>
+              <div className="border my-2 border-b-foreground/10 mx-[-5]"></div>
+              {category.skills.map((skill, idx) => (
+                <div key={idx} className="flex flex-row gap-5">
+                  <motion.img
+                    src={skill.icon}
+                    alt={skill.name}
+                    className="w-14 h-14"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground">{skill.name}</h3>
+                    <h4>{skill.description}</h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+};
+
+export default SkillSection;

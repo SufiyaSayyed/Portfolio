@@ -2,11 +2,8 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { experiences, projects } from "@/data";
-import ProjectCard from "./ProjectCard";
+import { experiences } from "@/data";
 import AnimatedLine from "./AnimatedLine";
-import { Card } from "./ui/card";
-import { li } from "framer-motion/client";
 
 const ExperienceSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
