@@ -46,7 +46,7 @@ const ExperienceSection = () => {
           </h1>
           <AnimatedLine />
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            My journey so far showcasing roles that shaped my skills and growth
+            My journey so far highlighting the roles that shaped my skills and growth
           </p>
         </motion.div>
 
