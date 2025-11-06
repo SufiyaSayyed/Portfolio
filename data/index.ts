@@ -36,7 +36,7 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
-    company: "Bajaj Finserv.",
+    company: "Bajaj Finserv",
     role: "Senior Software Engineer",
     duration: "July 2023 - April 2025",
     description: [
