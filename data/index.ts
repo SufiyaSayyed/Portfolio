@@ -1,5 +1,14 @@
 import { Experience, Project, SkillsCategory, SocialLinks } from "@/types";
 
+export const navItems = [
+  { id: "about", label: "About Me" },
+  { id: "experience", label: "Experience" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "connect", label: "Contact" },
+];
+
+
 export const typeWriterLine = [
   { text: "Hi, ", className: "text-foreground text-3xl md:text-6xl font-medium" },
   { text: "I'm ", className: "text-foreground text-3xl md:text-6xl font-medium" },
@@ -43,7 +52,7 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     company: "Bajaj Finserv",
-    role: "Senior Software Engineer",
+    role: "Software Engineer",
     duration: "July 2023 - April 2025",
     description: [
       "Integrated GenAI backend with role-based chat UI, enabling intelligent HR queries and enhancing operational efficiency.",
@@ -166,4 +175,4 @@ export const socialLinks: SocialLinks[] = [
   },
 ]
 
-export const ResumeLink: string = "https://drive.google.com/file/d/1y5hhwhSApyu_AO14BzllZVFn7uKjK8Xh/view?usp=sharing"
+export const ResumeLink: string = "https://drive.google.com/file/d/1UfVy5N9G52Zg0vPjUFZA3VLzyelTggp0/view?usp=sharing"

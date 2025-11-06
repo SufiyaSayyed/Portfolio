@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import { Download, Menu, X } from "lucide-react";
 import Image from "next/image";
-import { ResumeLink } from "@/data";
+import { navItems, ResumeLink } from "@/data";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("about");
@@ -22,14 +22,6 @@ const Navbar = () => {
     [0, 100],
     ["rgba(240, 239, 238, 0)", "#FBF6F0"]
   );
-
-  const navItems = [
-    { id: "about", label: "About Me" },
-    { id: "projects", label: "Projects" },
-    { id: "skills", label: "Skills" },
-    { id: "experience", label: "Experience" },
-    { id: "connect", label: "Contact" },
-  ];
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -218,20 +210,6 @@ const Navbar = () => {
                   </button>
                 </motion.li>
               ))}
-
-              <motion.li
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 }}
-              >
-                <button
-                  onClick={() => window.open(ResumeLink, "_blank")}
-                  className="flex gap-2 items-center mt-2 px-5 py-2 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity"
-                >
-                  <Download size={16} />
-                  Resume
-                </button>
-              </motion.li>
             </ul>
           </motion.div>
         )}

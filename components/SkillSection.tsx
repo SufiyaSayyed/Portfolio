@@ -25,7 +25,7 @@ const SkillSection = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen bg-background py-12 md:py-20 px-10 md:px-8 lg:px-12"
+      className="max-h-screen bg-background py-12 md:py-20 px-10 md:px-8 lg:px-12"
     >
       <motion.div
         ref={containerRef}
@@ -56,7 +56,7 @@ const SkillSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ staggerChildren: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20"
+          className="hidden md:grid md:grid-cols-2 md:gap-20"
         >
           {skillsCategory.map((category, index) => (
             <motion.div
@@ -94,6 +94,48 @@ const SkillSection = () => {
                   </div>
                 </motion.div>
               ))}
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/*mobile skills grid */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.1 }}
+          className="md:hidden grid grid-cols-2 gap-4"
+        >
+          {skillsCategory.map((category, index) => (
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              key={index}
+            >
+              <h2 className="text-md font-semibold text-muted-foreground border-b-[1.8] border-b-foreground/20 px-1.5 w-fit">
+                {category.title}
+              </h2>
+              {/* <div className="border mt-2 border-b-foreground/10 mx-[-5]"></div> */}
+              <div className="flex gap-2">
+                {category.skills.map((skill, idx) => (
+                  <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.05 }}
+                    key={idx}
+                    className="flex flex-row gap-5 py-3 items-center"
+                  >
+                    <motion.img
+                      src={skill.icon}
+                      alt={skill.name}
+                      className="w-10 h-10"
+                    />
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           ))}
         </motion.div>

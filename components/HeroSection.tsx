@@ -3,7 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import { typeWriterLine } from "@/data";
+import { ResumeLink, typeWriterLine } from "@/data";
+import { Download } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -19,7 +20,7 @@ const HeroSection = () => {
       >
         <TypewriterEffect
           words={typeWriterLine}
-          cursorClassName="bg-primary"
+          cursorClassName="bg-primary h-0 w-0"
           className="md:mb-6 mb-4"
         />
       </motion.h1>
@@ -38,8 +39,7 @@ const HeroSection = () => {
           with a passion for blending design with functionality.
         </p>
         <p className="text-base md:text-xl font-light">
-          {`I'm a curious developer designing solutions that turn complex
-          problems into simple, impactful experiences.`}
+          {`I'm a curious developer turning complex problems into simple, impactful user experiences.`}
         </p>
       </motion.div>
       {/* CTA Button */}
@@ -51,10 +51,22 @@ const HeroSection = () => {
           const section = document.getElementById("projects");
           section?.scrollIntoView({ behavior: "smooth" });
         }}
-        className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md"
+        className="hidden md:flex px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md"
       >
         View My Work
       </motion.button>
+      <motion.button
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.6 }}
+        onClick={() => window.open(ResumeLink, "_blank")}
+
+        className="md:hidden flex gap-2 items-center px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md"
+      >
+         <Download size={16} />
+         Resume
+      </motion.button>
+      
     </section>
   );
 };
