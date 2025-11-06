@@ -46,8 +46,7 @@ const ExperienceSection = () => {
           </h1>
           <AnimatedLine />
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Building impactful products and gaining hands-on experience across
-            full-stack development, AI, and design
+            My journey so far showcasing roles that shaped my skills and growth
           </p>
         </motion.div>
 

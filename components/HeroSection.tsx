@@ -3,28 +3,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import { typeWriterLine } from "@/data";
 
 const HeroSection = () => {
-  const firstLine = [
-    { text: "Hi ", className: "text-foreground" },
-    { text: "I'm ", className: "text-foreground" },
-    { text: "Sufiya", className: "text-primary" },
-    { text: "Sayyed", className: "text-primary" },
-  ];
-
   return (
     <section
       id="about"
       className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-background"
     >
-      {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground mb-10 leading-tight"
+        className="font-medium leading-tight"
       >
-        <TypewriterEffect words={firstLine} cursorClassName="bg-black" className="text-3xl"/>
+        <TypewriterEffect
+          words={typeWriterLine}
+          cursorClassName="bg-primary"
+          className="md:mb-6 mb-4"
+        />
       </motion.h1>
 
       {/* Subheading lines */}
@@ -32,25 +29,19 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.8 }}
-        className="text-base md:text-lg lg:text-xl text-muted-foreground mb-10 leading-relaxed tracking-wide max-w-3xl"
+        className="text-muted-foreground max-w-4xl leading-relaxed tracking-wide mb-10"
       >
-        <p className="mb-2">
-          A{" "}
+        <p className="mb-3 text-lg md:text-2xl font-normal">
           <span className="font-semibold text-foreground">
             Full-Stack Developer
           </span>{" "}
-          building intelligent and scalable digital solutions.
+          with a passion for blending design with functionality.
         </p>
-        <p>
-          I craft{" "}
-          <span className="font-medium text-foreground">
-            web and AI-powered applications
-          </span>{" "}
-          that are efficient, reliable, and user-focused – turning complex
-          problems into simple, impactful experiences.
+        <p className="text-base md:text-xl font-light">
+          {`I'm a curious developer designing solutions that turn complex
+          problems into simple, impactful experiences.`}
         </p>
       </motion.div>
-
       {/* CTA Button */}
       <motion.button
         initial={{ opacity: 0, y: 20 }}
@@ -60,7 +51,7 @@ const HeroSection = () => {
           const section = document.getElementById("projects");
           section?.scrollIntoView({ behavior: "smooth" });
         }}
-        className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md"
+        className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity shadow-md"
       >
         View My Work
       </motion.button>

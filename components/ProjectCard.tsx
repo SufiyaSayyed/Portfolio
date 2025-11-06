@@ -129,7 +129,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
                       }}
                       whileHover={{ scale: 1.05, y: -2 }}
                       className="
-                      px-3 py-1 rounded-xl text-xs md:text-sm font-semibold 
+                      px-3 py-1 rounded-xl text-xs md:text-sm font-medium
                       text-accent border border-accent/50
                       group-hover:shadow-md
                       transition-all duration-300
@@ -172,7 +172,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
                     }}
                     whileHover={{ scale: 1.05, y: -2 }}
                     className="
-                      px-3 py-1 rounded-xl text-xs md:text-sm font-semibold 
+                      px-3 py-1 rounded-xl text-xs md:text-sm font-medium 
                       text-accent border border-accent/50
                       group-hover:shadow-md
                       transition-all duration-300
@@ -192,7 +192,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
                   onClick={() => window.open(project.link, "_blank")}
                   className="flex items-center gap-1 px-3 py-1 min w-fit bg-primary border-2 border-primary text-primary-foreground rounded-xl font-medium"
                 >
-                  Demo
+                  View
                   <ArrowRight size={16} />
                 </motion.button>
               </motion.div>
@@ -206,7 +206,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({
             animate={{ opacity: isHovered ? 1 : 0, x: isHovered ? 0 : -20 }}
             className="hidden absolute bottom-10 right-6 md:flex items-center gap-2 text-primary text-sm font-bold"
           >
-            <span>View Demo</span>
+            <span>View</span>
             <motion.svg
               className="w-4 h-4"
               viewBox="0 0 24 24"

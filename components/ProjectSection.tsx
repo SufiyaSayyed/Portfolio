@@ -48,8 +48,7 @@ const ProjectSection: React.FC = () => {
           </h1>
           <AnimatedLine />
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Exploring the intersection of AI, design, and engineering through
-            innovative solutions
+            Explore my latest work, showcasing blend of design and development
           </p>
         </motion.div>
 

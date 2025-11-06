@@ -107,7 +107,7 @@ const Navbar = () => {
   return (
     <motion.nav
       style={{ backgroundColor }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Brand */}

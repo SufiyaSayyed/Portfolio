@@ -1,12 +1,18 @@
 import { Experience, Project, SkillsCategory, SocialLinks } from "@/types";
-import { Github, Linkedin, Mail } from "lucide-react";
+
+export const typeWriterLine = [
+  { text: "Hi, ", className: "text-foreground text-3xl md:text-6xl font-medium" },
+  { text: "I'm ", className: "text-foreground text-3xl md:text-6xl font-medium" },
+  { text: "Sufiya ", className: "text-primary text-3xl md:text-6xl font-semibold" },
+  { text: "Sayyed", className: "text-primary text-3xl md:text-6xl font-semibold" },
+];
 
 export const projects: Project[] = [
   {
     title: "Paperlytic AI",
     subtitle:
-      "End-to-end research analysis system using FastAPI, Gemini, Pinecone, and MongoDB — enabling semantic search and live AI summaries for uploaded papers.",
-    tags: ["AI Agent", "Full Stack", "FastAPI", "React"],
+      "End-to-end app designed to help users summarize, analyze, and critique academic research papers.",
+    tags: ["AI Summarization", "Knowledge Extraction", "AI Analysis"],
     image: "/project-ai-research.png",
     size: "large",
     accentColor: "accent",
@@ -15,8 +21,8 @@ export const projects: Project[] = [
   {
     title: "AI ResuMate",
     subtitle:
-      "An LLM-powered job matcher analyzing resumes for ATS compatibility, skill gaps, and keyword optimization with interactive dashboards.",
-    tags: ["LLM", "AI", "React", "Puter.js"],
+      "An AI-powered Resume Analyzer that evaluates the resume against key metrics and provides an AI-generated feedback score.",
+    tags: ["Resume Analysis", "AI Feedback", "Scoring", "Evaluation"],
     image: "/project-ai-resumate.png",
     size: "medium",
     accentColor: "accent",
@@ -25,8 +31,8 @@ export const projects: Project[] = [
   {
     title: "FableAI",
     subtitle:
-      "Scalable production-ready React app using Bria.ai APIs for fast, high-quality AI image generation and editing to accelerate marketing workflows.",
-    tags: ["AI", "Generative", "React", "Bria.ai"],
+      "An AI tool to generate images with prompts and other features to produce high-quality visuals tailored for marketing needs.",
+    tags: ["Image Generation", "Visual Creation", "AI Editing"],
     image: "/project-ai-fable-1.png",
     size: "medium",
     accentColor: "accent",
