@@ -25,7 +25,7 @@ const SkillSection = () => {
   return (
     <section
       id="skills"
-      className="max-h-screen bg-background py-12 md:py-20 px-10 md:px-8 lg:px-12"
+      className="max-h-screen bg-background py-30 md:py-20 px-10 md:px-8 lg:px-12"
     >
       <motion.div
         ref={containerRef}
