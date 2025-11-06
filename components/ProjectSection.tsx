@@ -32,7 +32,7 @@ const ProjectSection: React.FC = () => {
       <motion.div
         ref={containerRef}
         style={{ opacity, scale }}
-        className="max-w-7xl mx-auto"
+        className="max-w-260 mx-auto"
         layout
       >
         {/* Header - Centered */}
@@ -46,7 +46,7 @@ const ProjectSection: React.FC = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
             Featured Projects
           </h1>
-          <AnimatedLine />
+          <AnimatedLine /> 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Explore my latest work, showcasing blend of design and development
           </p>

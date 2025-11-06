@@ -165,3 +165,5 @@ export const socialLinks: SocialLinks[] = [
     href: "mailto:ssayyed01@gmail.com",
   },
 ]
+
+export const ResumeLink: string = "https://drive.google.com/file/d/1y5hhwhSApyu_AO14BzllZVFn7uKjK8Xh/view?usp=sharing"

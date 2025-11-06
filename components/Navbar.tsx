@@ -7,6 +7,8 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import { Download, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { ResumeLink } from "@/data";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("about");
@@ -81,7 +83,10 @@ const Navbar = () => {
       }
 
       // If scrolled to (or very near) bottom, ensure last section selected
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 5) {
+      if (
+        window.innerHeight + window.scrollY >=
+        document.body.offsetHeight - 5
+      ) {
         found = sections[sections.length - 1];
       }
 
@@ -118,7 +123,7 @@ const Navbar = () => {
           className="text-2xl font-bold text-primary cursor-pointer"
           onClick={() => scrollToSection("about")}
         >
-          Sufiya
+          <Image src="/logo.svg" alt="Sufiya" width={35} height={35} />
         </motion.div>
 
         {/* Desktop Menu */}
@@ -139,11 +144,15 @@ const Navbar = () => {
                 onClick={() => scrollToSection(item.id)}
                 className="relative text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
-                <span className={`${
-                      activeSection === item.id
-                        ? "font-semibold text-primary"
-                        : "font-normal"
-                    } `}>{item.label}</span>
+                <span
+                  className={`${
+                    activeSection === item.id
+                      ? "font-semibold text-primary"
+                      : "font-normal"
+                  } `}
+                >
+                  {item.label}
+                </span>
                 {activeSection === item.id && (
                   <motion.div
                     layoutId="activeSection"
@@ -161,7 +170,7 @@ const Navbar = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          onClick={() => scrollToSection("connect")}
+          onClick={() => window.open(ResumeLink, "_blank")}
           className="hidden md:flex gap-2 items-center px-6 py-2 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity"
         >
           <Download size={16} />
@@ -216,8 +225,8 @@ const Navbar = () => {
                 transition={{ duration: 0.4, delay: 0.3 }}
               >
                 <button
-                  onClick={() => scrollToSection("connect")}
-                  className="flex gap-2 items-center mt-2 px-5 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
+                  onClick={() => window.open(ResumeLink, "_blank")}
+                  className="flex gap-2 items-center mt-2 px-5 py-2 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity"
                 >
                   <Download size={16} />
                   Resume
