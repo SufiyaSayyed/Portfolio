@@ -45,7 +45,7 @@ export const projects: Project[] = [
     image: "/project-ai-fable-1.png",
     size: "medium",
     accentColor: "accent",
-    link: "https://fableai.netlify.app/",
+    link: "https://github.com/SufiyaSayyed/Ad-Snap-AI-App.git",
   },
 ];
 
