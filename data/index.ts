@@ -8,12 +8,23 @@ export const navItems = [
   { id: "connect", label: "Contact" },
 ];
 
-
 export const typeWriterLine = [
-  { text: "Hi, ", className: "text-foreground text-3xl md:text-6xl font-medium" },
-  { text: "I'm ", className: "text-foreground text-3xl md:text-6xl font-medium" },
-  { text: "Sufiya ", className: "text-primary text-3xl md:text-6xl font-semibold" },
-  { text: "Sayyed", className: "text-primary text-3xl md:text-6xl font-semibold" },
+  {
+    text: "Hi, ",
+    className: "text-foreground text-3xl md:text-6xl font-medium",
+  },
+  {
+    text: "I'm ",
+    className: "text-foreground text-3xl md:text-6xl font-medium",
+  },
+  {
+    text: "Sufiya ",
+    className: "text-primary text-3xl md:text-6xl font-semibold",
+  },
+  {
+    text: "Sayyed",
+    className: "text-primary text-3xl md:text-6xl font-semibold",
+  },
 ];
 
 export const projects: Project[] = [
@@ -28,6 +39,16 @@ export const projects: Project[] = [
     link: "https://github.com/SufiyaSayyed/AI-Research-Paper-Summarizer-and-Critque.git",
   },
   {
+    title: "ImagineAI",
+    subtitle:
+      "An AI tool to generate images with prompts and other features to produce high-quality visuals tailored for marketing needs.",
+    tags: ["Image Generation", "Visual Creation", "AI Editing"],
+    image: "/project-ai-fable-1.png",
+    size: "medium",
+    accentColor: "accent",
+    link: "https://fableai.netlify.app/",
+  }, 
+  {
     title: "AI ResuMate",
     subtitle:
       "An AI-powered Resume Analyzer that evaluates the resume against key metrics and provides an AI-generated feedback score.",
@@ -36,16 +57,6 @@ export const projects: Project[] = [
     size: "medium",
     accentColor: "accent",
     link: "https://ai-resumate.netlify.app/",
-  },
-  {
-    title: "FableAI",
-    subtitle:
-      "An AI tool to generate images with prompts and other features to produce high-quality visuals tailored for marketing needs.",
-    tags: ["Image Generation", "Visual Creation", "AI Editing"],
-    image: "/project-ai-fable-1.png",
-    size: "medium",
-    accentColor: "accent",
-    link: "https://github.com/SufiyaSayyed/Ad-Snap-AI-App.git",
   },
 ];
 
@@ -81,81 +92,81 @@ export const experiences: Experience[] = [
 
 export const skillsCategory: SkillsCategory[] = [
   {
-    "title": "Frontend",
-    "skills": [
+    title: "Frontend",
+    skills: [
       {
-        "name": "React",
-        "description": "For building fast, interactive UIs",
-        "icon": "/react.svg"
+        name: "React",
+        description: "For building fast, interactive UIs",
+        icon: "/react.svg",
       },
       {
-        "name": "Angular",
-        "description": "For scalable, enterprise-grade web apps",
-        "icon": "/angular.svg"
+        name: "Angular",
+        description: "For scalable, enterprise-grade web apps",
+        icon: "/angular.svg",
       },
       {
-        "name": "Tailwind CSS",
-        "description": "For rapid, utility-first UI styling",
-        "icon": "/tailwind.svg"
-      }
-    ]
+        name: "Tailwind CSS",
+        description: "For rapid, utility-first UI styling",
+        icon: "/tailwind.svg",
+      },
+    ],
   },
   {
-    "title": "Backend",
-    "skills": [
+    title: "Backend",
+    skills: [
       {
-        "name": "FastAPI",
-        "description": "For high-performance Python APIs",
-        "icon": "/fastapi.svg"
+        name: "FastAPI",
+        description: "For high-performance Python APIs",
+        icon: "/fastapi.svg",
       },
       {
-        "name": "Langchain",
-        "description": "For building LLM-powered applications",
-        "icon": "/langchain.svg"
+        name: "Langchain",
+        description: "For building LLM-powered applications",
+        icon: "/langchain.svg",
       },
       {
-        "name": "MongoDB",
-        "description": "For flexible, document-based databases",
-        "icon": "/mongodb.svg"
-      }
-    ]
+        name: "MongoDB",
+        description: "For flexible, document-based databases",
+        icon: "/mongodb.svg",
+      },
+    ],
   },
   {
-    "title": "Languages",
-    "skills": [
+    title: "Languages",
+    skills: [
       {
-        "name": "Typescript",
-        "description": "For scalable, type-safe JavaScript code",
-        "icon": "/typescript.svg"
+        name: "Typescript",
+        description: "For scalable, type-safe JavaScript code",
+        icon: "/typescript.svg",
       },
       {
-        "name": "Python",
-        "description": "For versatile scripting and data tasks",
-        "icon": "/python.svg"
+        name: "Python",
+        description: "For versatile scripting and data tasks",
+        icon: "/python.svg",
       },
       {
-        "name": "HTML & CSS",
-        "description": "For creating and styling web pages",
-        "icon": "/htmlcss.svg"
-      }
-    ]
+        name: "HTML & CSS",
+        description: "For creating and styling web pages",
+        icon: "/htmlcss.svg",
+      },
+    ],
   },
   {
-    "title": "Tools & DevOps",
-    "skills": [
+    title: "Tools & DevOps",
+    skills: [
       {
-        "name": "Git & Github",
-        "description": "For version control and collaboration",
-        "icon": "/github.svg"
+        name: "Git & Github",
+        description: "For version control and collaboration",
+        icon: "/github.svg",
       },
       {
-        "name": "Docker",
-        "description": "For containerized app deployment",
-        "icon": "/docker.svg"
-      }
-    ]
-  }
-]
+        name: "Docker",
+        description: "For containerized app deployment",
+        icon: "/docker.svg",
+      },
+    ],
+  },
+];
 
 export const socialLinks: SocialLinks[] = [
   {
@@ -173,6 +184,7 @@ export const socialLinks: SocialLinks[] = [
     label: "Email",
     href: "mailto:ssayyed01@gmail.com",
   },
-]
+];
 
-export const ResumeLink: string = "https://drive.google.com/file/d/1UfVy5N9G52Zg0vPjUFZA3VLzyelTggp0/view?usp=sharing"
+export const ResumeLink: string =
+  "https://drive.google.com/file/d/1UfVy5N9G52Zg0vPjUFZA3VLzyelTggp0/view?usp=sharing";
