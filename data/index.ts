@@ -187,4 +187,4 @@ export const socialLinks: SocialLinks[] = [
 ];
 
 export const ResumeLink: string =
-  "https://drive.google.com/file/d/1UfVy5N9G52Zg0vPjUFZA3VLzyelTggp0/view?usp=sharing";
+  "https://drive.google.com/file/d/1ol4PmLhXaTfZj0XQL1E4SpWAV0PtkDhL/view?usp=sharing";
