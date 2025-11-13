@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     title: "Sufiya Sayyed | Portfolio",
     description: "Full Stack Developer portfolio showcasing projects and experience",
     images: [
-      "favicon.ico", // 👈 image as string
     ],
   },
 };
