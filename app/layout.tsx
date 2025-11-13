@@ -16,6 +16,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Portfolio | Sufiya",
   description: "Full Stack Developer portfolio showcasing projects and experience",
+  openGraph: {
+    title: "Sufiya Sayyed | Portfolio",
+    description: "Full Stack Developer portfolio showcasing projects and experience",
+    images: [
+      "favicon.ico", // 👈 image as string
+    ],
+  },
 };
 
 export default function RootLayout({
