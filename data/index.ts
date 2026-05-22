@@ -63,7 +63,7 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     company: "Bajaj Finserv",
-    role: "Software Engineer",
+    role: "Senior Software Engineer",
     duration: "July 2023 - April 2025",
     description: [
       "Integrated GenAI backend with role-based chat UI, enabling intelligent HR queries and enhancing operational efficiency.",
@@ -187,4 +187,4 @@ export const socialLinks: SocialLinks[] = [
 ];
 
 export const ResumeLink: string =
-  "https://drive.google.com/file/d/1RoHvpluZWKIkAw8pnUipYJhGunWeXVzU/view?usp=sharing";
+  "https://drive.google.com/file/d/1zkTLF6Xngx7BSHcZsetFYOSGxPjBc7Fj/view?usp=sharing";
